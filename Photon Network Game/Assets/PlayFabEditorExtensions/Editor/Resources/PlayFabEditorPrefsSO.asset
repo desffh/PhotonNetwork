@@ -15,10 +15,10 @@ MonoBehaviour:
   DevAccountEmail: yangju058@gmail.com
   DevAccountToken: ynxb9nyfwmnwsmrx19naaxbcpimxy1uzgdsim1dspec8xwukzb8u4td9tfj4c75ogknpos14b156tekbscptqu9xnf76hwrswxg6138dtxeioiayqxgye47t1dtox5q476yqd5j7f1zqxhoip553rxjsgxkafgsyxmpp4sc8j4t84ts1n9hzhwxcbi85bzxa4eny8d58
   AadAuthorization: 
-  SelectedStudio: 
-  SdkPath: 
+  SelectedStudio: GameStudio
+  SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
-  PanelIsShown: 1
-  curMainMenuIdx: 0
+  PanelIsShown: 0
+  curMainMenuIdx: 1
   curSubMenuIdx: 0
