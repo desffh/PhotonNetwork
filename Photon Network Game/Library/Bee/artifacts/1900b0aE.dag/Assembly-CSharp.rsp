@@ -387,6 +387,7 @@
 "Assets/Photon/PhotonChat/Demos/DemoChat/NamePickGui.cs"
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
 "Assets/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs"
+"Assets/Scripts/LobbyManager.cs"
 "Assets/Scripts/PlayfabManager.cs"
 -langversion:9.0
 /deterministic
