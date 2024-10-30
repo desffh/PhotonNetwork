@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c1fbf6d85951d040bfea9bcb4de2404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture2D: {fileID: 2800000, guid: 0f45821c9378469498c0044ff9068ea2, type: 3}
+  texture2D: {fileID: 2800000, guid: 080c6d44947450e40bace16de0ab1897, type: 3}
 --- !u!4 &1309672240
 Transform:
   m_ObjectHideFlags: 0
@@ -1151,7 +1151,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
