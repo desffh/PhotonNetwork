@@ -9,7 +9,8 @@ public enum State
 {
     WALK,
     ATTACK,
-    DIE
+    DIE,
+    NONE
 }
 
 public class Rack : MonoBehaviour
@@ -49,6 +50,8 @@ public class Rack : MonoBehaviour
 
             case State.DIE: Die(); 
                 break;
+            case State.NONE:
+                break;
         }
     }
 
@@ -65,7 +68,17 @@ public class Rack : MonoBehaviour
 
     public void Die()
     {
-        animator.SetTrigger("Die");
+        if (state != State.NONE)
+        {
+            state = State.DIE;
+
+            navMeshAgent.speed = 0;
+
+            animator.SetTrigger("Die");
+
+
+            state = State.NONE; // 아무것도 아닌 상태
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,4 +89,8 @@ public class Rack : MonoBehaviour
         }
     }
 
+    public void Release()
+    {
+        PhotonNetwork.Destroy(navMeshAgent.gameObject);
+    }
 }
