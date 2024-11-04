@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using ExitGames.Client.Photon;
 
 [RequireComponent(typeof(Move))]
 [RequireComponent (typeof(Rotation))]
+
 public class Character : MonoBehaviourPun
 {
     [SerializeField] Move move;
@@ -12,15 +14,16 @@ public class Character : MonoBehaviourPun
     [SerializeField] Camera remoteCamera; // 원격개체
     [SerializeField] Rigidbody rigidBody;
 
+
     private void Awake()
     {
+
         move = GetComponent<Move>();
         rigidBody = GetComponent<Rigidbody>();
         rotation = GetComponent<Rotation>();
     }
 
 
-    // Start is called before the first frame update
     void Start()
     {
         DisableCamera();
@@ -29,6 +32,7 @@ public class Character : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+
         if (photonView.IsMine == false) return;
 
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -61,4 +65,5 @@ public class Character : MonoBehaviourPun
             remoteCamera.gameObject.SetActive(false );
         }
     }
+
 }

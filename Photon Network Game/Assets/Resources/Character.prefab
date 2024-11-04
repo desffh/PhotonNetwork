@@ -700,6 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nickNameText: {fileID: 6649124142006890526}
+  remoteCamera: {fileID: 8662612793654891801}
 --- !u!1 &5507502414764252477
 GameObject:
   m_ObjectHideFlags: 0

@@ -397,6 +397,7 @@
 "Assets/Scripts/Information.cs"
 "Assets/Scripts/Managers/CharacterSpawnerManager.cs"
 "Assets/Scripts/Managers/DialogManager.cs"
+"Assets/Scripts/Managers/GameManager.cs"
 "Assets/Scripts/Managers/LobbyManager.cs"
 "Assets/Scripts/Managers/MouseManager.cs"
 "Assets/Scripts/Managers/PlayfabManager.cs"
