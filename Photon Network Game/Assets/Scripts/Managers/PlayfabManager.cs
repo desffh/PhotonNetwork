@@ -30,7 +30,7 @@ public class PlayfabManager : MonoBehaviourPunCallbacks
     // 회원가입이 실패했을 때
     public void Failure(PlayFabError playFabError)
     {
-        Debug.Log(playFabError.GenerateErrorReport());
+        PopUpManager.Instance.Show(PopUpType.SIGNUPFAILURE, playFabError.GenerateErrorReport());
     }
     
     // 로그인
