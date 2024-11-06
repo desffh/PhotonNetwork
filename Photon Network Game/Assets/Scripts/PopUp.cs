@@ -2,23 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 
-public class PopUp : MonoBehaviour
+public abstract class PopUp : MonoBehaviourPunCallbacks
 {
-    [SerializeField] Text text;
-    
-    public void SetData(string message)
-    {
-        text.text = message;
-    }
-
-
-    // 닫아주기 버튼
-    public void OnClose()
-    {
-        gameObject.SetActive(false);
-    }
+    public abstract void OnConfirm();
 
 
 

@@ -7,8 +7,7 @@ using UnityEngine;
 // 열거형
 public enum PopUpType
 {
-    SIGNINFAILURE,
-    SIGNUPFAILURE,
+    TEXT,
     SIGNUP,
     PAUSE
 }
@@ -53,13 +52,15 @@ public class PopUpManager : MonoBehaviour
         else
         {
            // 게임 오브젝트 생성
-            popup = Instantiate(Resources.Load<GameObject>("Sign_In_Failure_PopUp"));
+            popup = Instantiate(Resources.Load<GameObject>(popuptype.ToString()));
 
             // 게임 오브젝트 부모위치 설정
             popup.transform.SetParent(parentTransform);
 
+            popup.GetComponent<RectTransform>().localPosition = new Vector2(0, 0);
+
            // PopUp컴포넌트 가져와서 SetData함수 호출
-            popup.GetComponent<PopUp>().SetData(content);
+           // popup.GetComponent<PopUp>().SetData(content);
 
            // 키값이 없다면 딕셔너리에 추가
             dictionary.Add(popuptype, popup);

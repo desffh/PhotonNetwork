@@ -21,16 +21,11 @@ public class PlayfabManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("Lobby Scene");
     }
 
-    // 회원가입이 성공했을 때
-    public void Success(RegisterPlayFabUserResult registerPlayFabUserResult)
-    {
-        Debug.Log(registerPlayFabUserResult.Request);
-        Debug.Log(registerPlayFabUserResult.ToString());
-    }
+
     // 회원가입이 실패했을 때
     public void Failure(PlayFabError playFabError)
     {
-        PopUpManager.Instance.Show(PopUpType.SIGNUPFAILURE, playFabError.GenerateErrorReport());
+        PopUpManager.Instance.Show(PopUpType.TEXT, playFabError.GenerateErrorReport());
     }
     
     // 로그인
@@ -51,19 +46,8 @@ public class PlayfabManager : MonoBehaviourPunCallbacks
     }
     public void OnSignUp()
     {
-        var request = new RegisterPlayFabUserRequest
-        {
-            Email = emailInputField.text,
-            Password = passwordInputField.text,
-            RequireBothUsernameAndEmail = false
-        };
+        PopUpManager.Instance.Show(PopUpType.SIGNUP, "Kim");
 
-        PlayFabClientAPI.RegisterPlayFabUser
-        (
-            request,
-            Success,
-            Failure
-        );
     }   
 
 }
