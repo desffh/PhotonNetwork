@@ -4,6 +4,8 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.UI;
+using Photon.Pun;
+using Unity.VisualScripting;
 
 public class SignUp : PopUp
 {
@@ -38,6 +40,14 @@ public class SignUp : PopUp
             Success,
             Failure
         );
+
+        PhotonNetwork.NickName = nicknameInputField.text;
+
+        PlayerPrefs.SetString("Nickname",PhotonNetwork.NickName);
+
+        emailInputField.text = "";
+        passwordInputField.text = "";
+        nicknameInputField.text = "";
 
         gameObject.SetActive(false );
     }

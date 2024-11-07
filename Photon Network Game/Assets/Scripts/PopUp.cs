@@ -9,9 +9,4 @@ public abstract class PopUp : MonoBehaviourPunCallbacks
 {
     public abstract void OnConfirm();
 
-
-
-
-
-
 }

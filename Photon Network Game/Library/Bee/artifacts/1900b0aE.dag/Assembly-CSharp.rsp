@@ -402,7 +402,6 @@
 "Assets/Scripts/Managers/PopUpManager.cs"
 "Assets/Scripts/Managers/RoomManager.cs"
 "Assets/Scripts/Managers/UnitManager.cs"
-"Assets/Scripts/NickNameManager.cs"
 "Assets/Scripts/Pause.cs"
 "Assets/Scripts/PopUp.cs"
 "Assets/Scripts/Rack.cs"
